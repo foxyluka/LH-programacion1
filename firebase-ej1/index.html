@@ -6,28 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="container mt-3">
-        <div class="mb-3">
-            <label class="form-label">nombre</label>
-            <input id="inp_nom" type="form-control" class="form-control">
-        </div>
-    
-        <div class="mb-3">
-            <label class="form-label">apellido</label>
-            <input id="inp_ape" type="form-control" class="form-control">
-        </div>
-    
-        <div class="mb-3">
-            <label class="form-label">dni</label>
-            <input id="inp_dni" type="form-control" class="form-control">
-        </div>
-    
-        <button id="obtener-datos" class="btn btn-warning">obtener dato</button>
-    </div>
-    
 
+<div class="container mt-3">
+
+    <div class="row">
+        <div class="col-4">
+        <div class="mb-3">
+                    <label class="btn btn-secondary">nombre</label>
+                    <input id="inp_nom" type="form-control" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="btn btn-secondary">apellido</label>
+                    <input id="inp_ape" type="form-control" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="btn btn-secondary">DNI</label>
+                    <input id="inp_dni" type="form-control" class="form-control">
+                </div>
+                <button id="obtener-datos" class="btn btn-success">guardar datos</button>       
+                
+        </div>
+        <div class="col-8">
+            <table class="table warning">
+                <thead class="table-light">
+                    <tr class="">
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+
+                <tbody ID="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    </div>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="firebase.js"></script>
